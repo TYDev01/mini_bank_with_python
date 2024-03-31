@@ -7,6 +7,11 @@ class BankAccount:
         return f"Account: '{self.account_name}' created.\nBalance = ${self.initial_amount:,.2f}"
     
     def getBalance(self):
-        return f"{self.account_name} account balance is ${self.initial_amount:,.2f}"
-    
+        print(f"{self.account_name} account balance is ${self.initial_amount:,.2f}")
+
+    def deposit(self, amount):
+        self.initial_amount =  self.initial_amount + amount
+        print(f"{self.account_name} deposited {amount:,.2f}")
+        self.getBalance()
+
     
